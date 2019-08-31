@@ -1,0 +1,11 @@
+ private enum SomeEnum
+        {
+            First = 4,
+            Second,
+            Third = 7
+        }
+       
+        static void Main(string[] args)
+        {
+            Console.WriteLine((int)SomeEnum.Second); //не отобразит не чего так как полю Second не присвоенно значения 
+        }

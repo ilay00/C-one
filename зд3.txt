@@ -1,0 +1,6 @@
+ int i = 1;
+            object obj = i;
+            ++i;
+           // Console.WriteLine(i); будит прибовления сумма 2
+            // Console.WriteLine(obj); в переменной i= 1   и переменную i пресвоить к пустому обЪекту вывод =1     
+           // Console.WriteLine((short)obj); неправильная запись для вывода на экран 
