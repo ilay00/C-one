@@ -1,0 +1,68 @@
+﻿<Window x:Class="cinemcass.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cinemcass"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="350"
+        Width="600"
+        Loaded="MainWindow_OnLoaded">
+    <TabControl>
+        <TabItem Header="cinemcass">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"
+                      Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="77*"/>
+                        <ColumnDefinition Width="184"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0"
+                           Content="Названия" />
+                    <TextBox Grid.Column="1"
+                             x:Name="colNameTxt"
+                             VerticalContentAlignment="Center"/>
+                    <Label Grid.Column="2"
+                           Content="Количество" />
+                    <TextBox Grid.Column="3"
+                             x:Name="headerNameTxt"
+                             VerticalContentAlignment="Center" Margin="10,0"/>
+                    <Button Grid.Column="4"
+                            Margin="15,6,100,8"
+                            Name="AddButton"
+                            Content="Добавить"
+                            Click="AddButton_OnClick"/>
+                </Grid>
+
+                <DataGrid x:Name="Grid"
+                          Grid.Row="1"
+                          Margin="5,0,5,5"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          ItemsSource="{Binding cinemaSet.Local}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID"
+                                            Width="30"
+                                            Binding="{Binding cinemaId}" />
+                        <DataGridTextColumn Header="Названия"
+                                            Width="200"
+                                            Binding="{Binding col}" />
+                        <DataGridTextColumn Header="Количество"
+                                            Width="100"
+                                            Binding="{Binding header}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Удолить " HorizontalAlignment="Left" Margin="499,11,0,0" VerticalAlignment="Top" Width="61" Click="Button_Click"/>
+            </Grid>
+        </TabItem>
+
+    </TabControl>
+</Window>

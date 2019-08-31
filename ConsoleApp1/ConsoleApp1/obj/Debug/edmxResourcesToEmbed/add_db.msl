@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="add_dbStoreContainer" CdmEntityContainer="add_dbContainer">
+    <EntitySetMapping Name="adddbSet">
+      <EntityTypeMapping TypeName="IsTypeOf(add_db.adddb)">
+        <MappingFragment StoreEntitySet="adddbSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="header" ColumnName="header" />
+          <ScalarProperty Name="col" ColumnName="col" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
